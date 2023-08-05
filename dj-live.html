@@ -371,7 +371,7 @@
                 emoji = emojis[randomIndex];
                 submission.innerHTML = `
                 <p class="submission-author">
-                  <span>${emoji} </span>${song.name}<span class="submission-time"> לפני ${timeAgo}</span>   
+                  <span>${emoji} </span>${song.name}<span class="submission-time">${timeAgo}</span>   
                 </p>
                 <p class="submission-song">${song.song}</p>
               `;
@@ -385,7 +385,7 @@
                 var diffInMinutes = Math.floor(diffInMilliseconds / 60000);
 
                 if (diffInMinutes < 60) {
-                    return diffInMinutes + " דקות";
+                    return "לפני " + diffInMinutes + " דקות";
                 } else {
                     return "";
                 }
