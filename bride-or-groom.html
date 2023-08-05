@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+
+<html dir="rtl" lang="he">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <link href="styles.css" rel="stylesheet" />
+    <title data-navbar-emoji="🥸" data-navbar-order="6" data-navbar-title="חידון אישיות">
+        Are You a Maya, or Are You a
+        Tom?
+    </title>
+</head>
+
+<body>
+    <div class="container">
+        <div id="menu-placeholder">
+            <style>
+                .header {
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    background-color: #9D5C63;
+                    border: 1px solid #D9D9D9;
+                    height: 70px;
+                    padding: 0 16px;
+                    position: relative;
+                    z-index: 2;
+                }
+
+                .header-heart-symbol {
+                    font-size: 24px;
+                    margin-right: 16px;
+                }
+
+                .header-center-text {
+                    color: white;
+                    font-size: 28px;
+                    font-family: "Meow Script", cursive;
+                    font-weight: 600;
+                    word-wrap: break-word;
+                }
+
+                .hamburger-menu {
+                    display: inline-block;
+                    cursor: pointer;
+                }
+
+                .hamburger-menu-bar {
+                    width: 26px;
+                    height: 2px;
+                    background-color: #fff;
+                    margin: 6px 0;
+                    transition: 0.4s;
+                }
+
+                .sliding-menu {
+                    position: fixed;
+                    right: -80%;
+                    width: 80%;
+                    height: 100%;
+                    background: white;
+                    box-sizing: border-box;
+                    transition: right 0.5s ease-in-out;
+                    z-index: 2;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: flex-start;
+                    justify-content: space-between;
+                    padding: 20px;
+                    top: 0;
+                }
+
+                .sliding-menu-close-button {
+                    font-size: 30px;
+                    font-weight: bold;
+                    margin-bottom: 20px;
+                }
+
+                .sliding-menu ul {
+                    list-style-type: none;
+                    padding: 0;
+                }
+
+                .sliding-menu li {
+                    margin: 10px 0;
+                }
+
+                .sliding-menu a {
+                    text-decoration: none;
+                    color: #000;
+                    text-align: justify;
+                    font-family: Assistant;
+                    font-size: 20px;
+                    font-style: normal;
+                    font-weight: 400;
+                    line-height: normal;
+                }
+
+                .sliding-menu a:hover {
+                    color: #888;
+                }
+
+                .sliding-menu-links {
+                    width: 100%;
+                    overflow-y: auto;
+                }
+
+                .sliding-menu-overlay {
+                    position: fixed;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                    background: rgba(0, 0, 0, 0.5);
+                    z-index: 1;
+                    display: none;
+                }
+
+                .whatsapp-icon {
+                    vertical-align: middle;
+                    width: 30px;
+                    height: 30px;
+                }
+
+                .menu-contact {
+                    /* border-top: 1px solid #000; */
+                    padding-top: 20px;
+                    width: 100%;
+                }
+
+                .menu-contact p {
+                    margin: 0;
+                    padding: 5px 0;
+                    font-size: 16px;
+                }
+
+                .menu-contact a {
+                    color: #000;
+                    text-decoration: none;
+                }
+
+                .menu-contact i {
+                    margin-left: 5px;
+                }
+            </style>
+            <!-- sliding-menu-Overlay to close the menu -->
+            <div class="sliding-menu-overlay" onclick="toggleMenu()"></div>
+            <!-- Page Header -->
+            <div class="header">
+                <div class="hamburger-menu" onclick="toggleMenu()">
+                    <div class="hamburger-menu-bar"></div>
+                    <div class="hamburger-menu-bar"></div>
+                    <div class="hamburger-menu-bar"></div>
+                </div>
+                <div class="header-center-text">Maya &amp; Tom</div>
+                <div class="header-heart-symbol">🤍</div>
+            </div>
+            <div class="sliding-menu" id="menu">
+                <div class="sliding-menu-close-button" onclick="toggleMenu()">X</div>
+                <div class="sliding-menu-links">
+                    <ul>
+                        <li><a href="index.html">❣️ עמוד הבית</a></li>
+                        <li><a href="dj-live.html">🎶 דיג׳יי לייב</a></li>
+                        <li><a href="food.html">🍲 תפריט</a></li>
+                        <li><a href="family-tree.html">🐣 מי זה מי</a></li>
+                        <li><a href="know-us.html">🏆 טריוויה</a></li>
+                        <li><a href="bride-or-groom.html"><strong>🥸 חידון אישיות</strong></a></li>
+                        <li><a href="seats.html">🍽️ סידורי הושבה</a></li>
+                        <li><a href="bathroom-bride.html">💄 להתרענן עם מאיה</a></li>
+                        <li><a href="bathroom-groom.html">🪒 להתרענן עם תום</a></li>
+                        <li><a href="message.html">👩‍❤️‍👨 הסיפור שלנו</a></li>
+                        <li><a href="gallery.html">📸 גלרייה בלייב</a></li>
+                        <li><a href="greetings.html">💌 ספר ברכות</a></li>
+                    </ul>
+                </div>
+                <div class="menu-contact">
+                    <p>קוד אהבה משלכם ← <a
+                            href="https://wa.me/972547899741?text=%D7%94%D7%99%D7%99%2C%20%D7%90%D7%A9%D7%9E%D7%97%20%D7%9C%D7%A4%D7%A8%D7%98%D7%99%D7%9D%20%D7%A0%D7%95%D7%A1%D7%A4%D7%99%D7%9D%20%D7%A2%D7%9C%20%D7%99%D7%A6%D7%99%D7%A8%D7%AA%20%D7%B4%D7%A7%D7%95%D7%93%20%D7%90%D7%94%D7%91%D7%94%D7%B4%20%D7%9E%D7%A9%D7%9C%D7%99%20%F0%9F%AB%B6%F0%9F%8F%BB"><img
+                                alt="WhatsApp" class="whatsapp-icon" src="./img/whatsapp-icon.png" /></a></p>
+                    <p><a href="mailto:hello@lovecode.co.il">hello@lovecode.co.il</a></p>
+                </div>
+            </div>
+            <script>
+                function toggleMenu() {
+                    var menu = document.getElementById("menu");
+                    var sliding_menu_overlay = document.querySelector('.sliding-menu-overlay');
+                    if (menu.style.right === "0%") {
+                        menu.style.right = "-80%";
+                        sliding_menu_overlay.style.display = 'none';
+                    } else {
+                        menu.style.right = "0%";
+                        sliding_menu_overlay.style.display = 'block';
+                    }
+                }
+            </script>
+        </div>
+        <div class="generic-page-header">
+            Are You a Maya, or Are You a Tom?
+        </div>
+        <div class="generic-page-intro-paragraph">
+            אולי התיישבתם רגע לנוח, ואולי לוקח יותר מדי זמן לטקס להתחיל - בינתיים, זה הזמן לבחון את עצמך: כמה טוב את.ה
+            מכיר.ה את מאיה ותום???
+        </div>
+        <div class="grid">
+            <div class="grid-item full-row">
+                <div data-tf-iframe-props="title=למי את.ה יותר דומה, מאיה או תום?" data-tf-medium="snippet"
+                    data-tf-opacity="100" data-tf-transitive-search-params="" data-tf-widget="w9sAkcND"
+                    style="width:100%;height:500px;">
+                </div>
+                <script src="//embed.typeform.com/next/embed.js">
+                </script>
+            </div>
+        </div>
+        <div id="footer-placeholder">
+            <style>
+                footer {
+                    text-align: center;
+                    padding: 10px 0;
+                    background-color: #fff;
+                    /* replace with the color you want */
+                }
+
+                .footer-header {
+                    font-size: 1.17em;
+                    /* Size is typically smaller than h2 and larger than h4 */
+                    font-weight: bold;
+                    /* Headings are usually bold */
+                    margin-top: 1em;
+                    /* Add space above the heading */
+                    margin-bottom: 0;
+                    /* Add space below the heading */
+                }
+
+                .footer-contact {
+                    display: flex;
+                    justify-content: center;
+                    gap: 30px;
+                    align-items: center;
+                    padding: 10px 0;
+                    font-size: 14px;
+                }
+
+                .foooter-whatsapp-icon {
+                    width: 20px;
+                    height: 20px;
+                    vertical-align: center;
+                }
+
+                footer a {
+                    color: #000;
+                    /* replace with the color you want */
+                    text-decoration: none;
+                }
+
+                footer small {
+                    color: grey;
+                    /* replace with the color you want */
+                }
+            </style>
+            <!-- <div style="clear:both;"></div> -->
+            <footer>
+                <div class="footer-header">?Want your own love code</div>
+                <div class="footer-contact">
+                    <a href="tel:054-7899741">054-7899741</a>
+                    <a
+                        href="https://wa.me/972547899741?text=%D7%94%D7%99%D7%99%2C%20%D7%90%D7%A9%D7%9E%D7%97%20%D7%9C%D7%A4%D7%A8%D7%98%D7%99%D7%9D%20%D7%A0%D7%95%D7%A1%D7%A4%D7%99%D7%9D%20%D7%A2%D7%9C%20%D7%99%D7%A6%D7%99%D7%A8%D7%AA%20%D7%B4%D7%A7%D7%95%D7%93%20%D7%90%D7%94%D7%91%D7%94%D7%B4%20%D7%9E%D7%A9%D7%9C%D7%99%20%F0%9F%AB%B6%F0%9F%8F%BB">
+                        <img alt="WhatsApp" class="foooter-whatsapp-icon" src="../img/whatsapp-icon.png" />
+                    </a>
+                    <a href="mailto:hello@lovecode.co.il">hello@lovecode.co.il</a>
+                </div>
+                <small>ⓒ Love Code 2023</small>
+            </footer>
+        </div>
+    </div>
+</body>
+
+</html>

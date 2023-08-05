@@ -1,0 +1,101 @@
+/* * {
+    outline: 1px solid red;
+} */
+@import url('https://fonts.googleapis.com/css2?family=Assistant:wght@200;300;400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Assistant:wght@200;300;400;500;600;700;800&family=Meow+Script&display=swap');
+
+/* Default styles */
+body,
+html {
+    font-family: 'Assistant', sans-serif;
+    /* Reset margin and padding for the entire page */
+    margin: 0;
+    padding: 0;
+    background-color: #fff;
+    color: #333;
+    height: 100vh;
+    overflow: hidden;
+    max-width: 100%;
+    /* prevents scrolling on the body */
+}
+
+.container {
+    height: 100%;
+    /* This padding should not be applied on the container but rather on the internal page */
+    /* padding: 15px; */
+    /* This makes sure you can't scroll sideways even elements overflow th page */
+    overflow-x: hidden;
+    /* adds scrolling to the container if necessary */
+}
+
+h1 {
+    font-size: 2em;
+}
+
+p {
+    font-size: 1em;
+}
+
+/* Grid system */
+.grid {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+}
+
+.grid-item {
+    flex: 1;
+    margin: 10px;
+    padding: 20px;
+    background-color: #ddd;
+    text-align: center;
+}
+
+/* Desktop Warning */
+@media (min-width: 1024px) {
+    body::before {
+        content: "אנחנו מתנצלים, אך האתר זמין רק לצפייה מהטלפון הנייד";
+        display: block;
+        text-align: center;
+        font-size: 2em;
+        color: red;
+    }
+
+    .container {
+        display: none;
+    }
+}
+
+
+/* For all page headers */
+.generic-page-header {
+
+    font-size: 2em;
+    /* You can adjust the size to fit your design */
+    color: #000000;
+    /* This is the text color, adjust as necessary */
+    text-align: center;
+    /* This centers the text, adjust as necessary */
+    font-weight: bold;
+    /* This makes the text bold, adjust as necessary */
+    margin: 20px 0;
+    /* This provides space above and below the heading, adjust as necessary */
+
+
+}
+
+/* For all page intro paragraphs  */
+.generic-page-intro-paragraph {
+
+    /* font-size: 2em; */
+    /* You can adjust the size to fit your design */
+    color: #000000;
+    /* This is the text color, adjust as necessary */
+    text-align: center;
+    /* This centers the text, adjust as necessary */
+    /* font-weight: bold; */
+    /* This makes the text bold, adjust as necessary */
+    margin: 20px 0;
+    /* This provides space above and below the heading, adjust as necessary */
+    padding: 5px 10px 10px;
+}
