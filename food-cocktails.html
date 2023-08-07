@@ -5,9 +5,7 @@
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <link href="styles.css" rel="stylesheet"/>
-<title data-navbar-emoji="🍽️" data-navbar-order="7" data-navbar-title="סידורי הושבה">
-        Find Your Seat
-    </title>
+<title data-navbar-emoji="🍹" data-navbar-order="18" data-navbar-title="תפריט קוקטיילים">Cocktails</title>
 </head>
 <body>
 <div class="container">
@@ -155,7 +153,7 @@
 <div class="sliding-menu" id="menu">
 <div class="sliding-menu-close-button" onclick="toggleMenu()">X</div>
 <div class="sliding-menu-links">
-<ul><li><a href="index.html">❣️ עמוד הבית</a></li><li><a href="dj-live.html">🎶 דיג׳יי לייב</a></li><li><a href="food-menu.html">🍲 תפריט</a></li><li><a href="food-image.html">🍲 תפריט</a></li><li><a href="family-tree.html">🐣 מי זה מי</a></li><li><a href="know-us.html">🏆 טריוויה</a></li><li><a href="bride-or-groom.html">🥸 חידון אישיות</a></li><li><a href="seats.html"><strong>🍽️ סידורי הושבה</strong></a></li><li><a href="bathroom-bride.html">💄 להתרענן עם מאיה</a></li><li><a href="bathroom-groom.html">🪒 להתרענן עם תום</a></li><li><a href="message.html">👩‍❤️‍👨 הסיפור שלנו</a></li><li><a href="gallery.html">📸 גלרייה בלייב</a></li><li><a href="greetings.html">💌 ספר ברכות</a></li><li><a href="food-cocktails.html">🍹 תפריט קוקטיילים</a></li></ul>
+<ul><li><a href="index.html">❣️ עמוד הבית</a></li><li><a href="dj-live.html">🎶 דיג׳יי לייב</a></li><li><a href="food-menu.html">🍲 תפריט</a></li><li><a href="food-image.html">🍲 תפריט</a></li><li><a href="family-tree.html">🐣 מי זה מי</a></li><li><a href="know-us.html">🏆 טריוויה</a></li><li><a href="bride-or-groom.html">🥸 חידון אישיות</a></li><li><a href="seats.html">🍽️ סידורי הושבה</a></li><li><a href="bathroom-bride.html">💄 להתרענן עם מאיה</a></li><li><a href="bathroom-groom.html">🪒 להתרענן עם תום</a></li><li><a href="message.html">👩‍❤️‍👨 הסיפור שלנו</a></li><li><a href="gallery.html">📸 גלרייה בלייב</a></li><li><a href="greetings.html">💌 ספר ברכות</a></li><li><a href="food-cocktails.html"><strong>🍹 תפריט קוקטיילים</strong></a></li></ul>
 </div>
 <div class="menu-contact">
 <p>קוד אהבה משלכם ← <a href="https://wa.me/972547899741?text=%D7%94%D7%99%D7%99%2C%20%D7%90%D7%A9%D7%9E%D7%97%20%D7%9C%D7%A4%D7%A8%D7%98%D7%99%D7%9D%20%D7%A0%D7%95%D7%A1%D7%A4%D7%99%D7%9D%20%D7%A2%D7%9C%20%D7%99%D7%A6%D7%99%D7%A8%D7%AA%20%D7%B4%D7%A7%D7%95%D7%93%20%D7%90%D7%94%D7%91%D7%94%D7%B4%20%D7%9E%D7%A9%D7%9C%D7%99%20%F0%9F%AB%B6%F0%9F%8F%BB"><img alt="WhatsApp" class="whatsapp-icon" src="./img/whatsapp-icon.png"/></a></p>
@@ -175,15 +173,131 @@
         }
     }
 </script></div>
-<div class="generic-page-header">
-            Find Your Seat
+<!-- TODO: Move over to a separte file once done -->
+<style>
+            .cocktail-grid {
+                display: grid;
+                /* background-color: #2196F3; */
+                width: 90%;
+                grid-template-columns: 40% 60%;
+                padding-bottom: 30px;
+                margin: auto;
+            }
+
+            .cocktail-grid-item {
+                background-color: #ffffff;
+                text-align: right;
+                padding: 5px;
+            }
+
+            .cocktail-image {
+                grid-column: 1;
+                grid-row: 1 / span 3;
+                margin: auto 0px auto 5px;
+                text-align: left;
+                padding-right: 0px;
+
+            }
+
+            .cocktail-image img {
+                border-radius: 50%;
+                width: 100%;
+                height: 100%;
+            }
+
+            .cocktail-name {
+                grid-column: 2;
+                grid-row: 1;
+                color: black;
+                font-size: 18px;
+                text-align: center;
+                font-family: "PT Serif";
+                font-weight: 600;
+            }
+
+            .cocktail-description {
+                grid-column: 2;
+                grid-row: 2;
+                color: black;
+                font-size: 16px;
+                margin: auto 0px;
+                text-align: justify;
+            }
+
+            .cocktail-ingredients {
+                grid-column: 2;
+                grid-row: 3;
+                font-size: 12px;
+                text-align: justify;
+            }
+        </style>
+<div class="generic-page-header">Cocktails</div>
+<div class="generic-page-intro-paragraph">קבלו אותם: הדרינקים המיוחדים שלנו להערב, מהלב שלנו - לכבד שלכם. שתו
+            באחריות 😉
         </div>
-<div class="generic-page-intro-paragraph">
-            כל השולחנות והמושבים - אולי נשים פה אופציית חיפוש?
-        </div>
-<div class="grid">
-<div class="grid-item">
-<img alt="Screenshot of our first chat" src="./img/menu.jpeg"/>
+<div class="cocktails-container">
+<div class="cocktail-full cocktail-grid">
+<div class="cocktail-grid-item cocktail-image">
+<img src="img/food-cocktails/madeinashkelon.png"/>
+</div>
+<div class="cocktail-grid-item cocktail-name">
+                    Indian Smoke
+                </div>
+<div class="cocktail-grid-item cocktail-description">
+                    טרופי, קריבי, ומרגש את החיך ואת הרוח. אדים מעושנים
+                    של אננס על גחלים, מיץ מנגו טבעי, לימון וטקילה רוויית
+                    שמש.
+                </div>
+<div class="cocktail-grid-item cocktail-ingredients">
+                    טקילה, מנגו, אננס מעושן, לימון, ביטרס, מלח צ'ילי
+                    וליים
+                </div>
+</div>
+<div class="cocktail-full cocktail-grid">
+<div class="cocktail-grid-item cocktail-image">
+<img src="img/food-cocktails/madeinashkelon.png"/>
+</div>
+<div class="cocktail-grid-item cocktail-name">
+                    Lyche'che
+                </div>
+<div class="cocktail-grid-item cocktail-description">
+                    ליצ'י - אדום, מתוק, וכל כך ייחודי. וודקה לימון עם נגיעות
+                    דובדבן, וכמובן - סירופ הליצ'י made Home. ממכר.
+                    בדקנו.
+                </div>
+<div class="cocktail-grid-item cocktail-ingredients">
+                    וודקה, לימון, ליצ׳י, בזיליקום ודובדבן
+                </div>
+</div>
+<div class="cocktail-full cocktail-grid">
+<div class="cocktail-grid-item cocktail-image">
+<img src="img/food-cocktails/madeinashkelon.png"/>
+</div>
+<div class="cocktail-grid-item cocktail-name">
+                    Bonanza </div>
+<div class="cocktail-grid-item cocktail-description">
+                    אננס מלוכלך זה אננס מרגש. טעמים עמוקים של וויסקי,
+                    טריות אננסית מגה-צהובה, לימון ומרירים שישלימו את
+                    התמונה.
+                </div>
+<div class="cocktail-grid-item cocktail-ingredients">
+                    וויסקי סקוטי, אננס, לימון, ביטרס
+                </div>
+</div>
+<div class="cocktail-full cocktail-grid">
+<div class="cocktail-grid-item cocktail-image">
+<img src="img/food-cocktails/madeinashkelon.png"/>
+</div>
+<div class="cocktail-grid-item cocktail-name">
+                    Pinia Addiction </div>
+<div class="cocktail-grid-item cocktail-description">
+                    מכירים את הקלאסיקה-קולדה? אז כמו... אבל שלנו
+                    ובצבע סגול מרגש. רום מתובל, אננס, קוקוס וכל מה
+                    שצריך בשביל קיץ משגע.
+                </div>
+<div class="cocktail-grid-item cocktail-ingredients">
+                    רום מתובל, קוקוס, סיגליות מרהיבות, אננס, לימון, נענע ואננס טרי
+                </div>
 </div>
 </div>
 <div id="footer-placeholder"><style>

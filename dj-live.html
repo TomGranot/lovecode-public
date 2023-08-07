@@ -1,212 +1,195 @@
 <!DOCTYPE html>
 
 <html dir="rtl" lang="he">
-
 <head>
-    <meta charset="utf-8" />
-    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
-    <link href="styles.css" rel="stylesheet" />
-    <title data-navbar-emoji="🎶" data-navbar-order="2" data-navbar-title="דיג׳יי לייב"> Hey DJ, Play My Song</title>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="styles.css" rel="stylesheet"/>
+<title data-navbar-emoji="🎶" data-navbar-order="2" data-navbar-title="דיג׳יי לייב"> Hey DJ, Play My Song</title>
 </head>
-
 <body>
-    <div class="container">
-        <div id="menu-placeholder">
-            <style>
-                .header {
-                    display: flex;
-                    align-items: center;
-                    justify-content: space-between;
-                    background-color: #9D5C63;
-                    border: 1px solid #D9D9D9;
-                    height: 70px;
-                    padding: 0 16px;
-                    position: relative;
-                    z-index: 2;
-                }
+<div class="container">
+<div id="menu-placeholder"><style>
+    .header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        background-color: #9D5C63;
+        border: 1px solid #D9D9D9;
+        height: 70px;
+        padding: 0 16px;
+        position: relative;
+        z-index: 2;
+    }
 
-                .header-heart-symbol {
-                    font-size: 24px;
-                    margin-right: 16px;
-                }
+    .header-heart-symbol {
+        font-size: 24px;
+        margin-right: 16px;
+    }
 
-                .header-center-text {
-                    color: white;
-                    font-size: 28px;
-                    font-family: "Meow Script", cursive;
-                    font-weight: 600;
-                    word-wrap: break-word;
-                }
+    .header-center-text {
+        color: white;
+        font-size: 28px;
+        font-family: "Meow Script", cursive;
+        font-weight: 400;
+        word-wrap: break-word;
+    }
 
-                .hamburger-menu {
-                    display: inline-block;
-                    cursor: pointer;
-                }
+    .hamburger-menu {
+        display: inline-block;
+        cursor: pointer;
+    }
 
-                .hamburger-menu-bar {
-                    width: 26px;
-                    height: 2px;
-                    background-color: #fff;
-                    margin: 6px 0;
-                    transition: 0.4s;
-                }
+    .hamburger-menu-bar {
+        width: 26px;
+        height: 2px;
+        background-color: #fff;
+        margin: 6px 0;
+        transition: 0.4s;
+    }
 
-                .sliding-menu {
-                    position: fixed;
-                    right: -80%;
-                    width: 80%;
-                    height: 100%;
-                    background: white;
-                    box-sizing: border-box;
-                    transition: right 0.5s ease-in-out;
-                    z-index: 2;
-                    display: flex;
-                    flex-direction: column;
-                    align-items: flex-start;
-                    justify-content: space-between;
-                    padding: 20px;
-                    top: 0;
-                }
+    .sliding-menu {
+        position: fixed;
+        right: -80%;
+        width: 80%;
+        height: 100%;
+        background: white;
+        box-sizing: border-box;
+        transition: right 0.5s ease-in-out;
+        z-index: 2;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: space-between;
+        padding: 20px;
+        top: 0;
+    }
 
-                .sliding-menu-close-button {
-                    font-size: 30px;
-                    font-weight: bold;
-                    margin-bottom: 20px;
-                }
+    .sliding-menu-close-button {
+        font-size: 30px;
+        font-weight: bold;
+        margin-bottom: 20px;
+    }
 
-                .sliding-menu ul {
-                    list-style-type: none;
-                    padding: 0;
-                }
+    .sliding-menu ul {
+        list-style-type: none;
+        padding: 0;
+    }
 
-                .sliding-menu li {
-                    margin: 10px 0;
-                }
+    .sliding-menu li {
+        margin: 10px 0;
+    }
 
-                .sliding-menu a {
-                    text-decoration: none;
-                    color: #000;
-                    text-align: justify;
-                    font-family: Assistant;
-                    font-size: 20px;
-                    font-style: normal;
-                    font-weight: 400;
-                    line-height: normal;
-                }
+    .sliding-menu a {
+        text-decoration: none;
+        color: #000;
+        text-align: justify;
+        font-family: Assistant;
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+    }
 
-                .sliding-menu a:hover {
-                    color: #888;
-                }
+    .sliding-menu a:hover {
+        color: #888;
+    }
 
-                .sliding-menu-links {
-                    width: 100%;
-                    overflow-y: auto;
-                }
+    .sliding-menu-links {
+        width: 100%;
+        overflow-y: auto;
+    }
 
-                .sliding-menu-overlay {
-                    position: fixed;
-                    top: 0;
-                    left: 0;
-                    width: 100%;
-                    height: 100%;
-                    background: rgba(0, 0, 0, 0.5);
-                    z-index: 1;
-                    display: none;
-                }
+    .sliding-menu-overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.5);
+        z-index: 1;
+        display: none;
+    }
 
-                .whatsapp-icon {
-                    vertical-align: middle;
-                    width: 30px;
-                    height: 30px;
-                }
+    .whatsapp-icon {
+        vertical-align: middle;
+        width: 30px;
+        height: 30px;
+    }
 
-                .menu-contact {
-                    /* border-top: 1px solid #000; */
-                    padding-top: 20px;
-                    width: 100%;
-                }
+    .menu-contact {
+        /* border-top: 1px solid #000; */
+        padding-top: 20px;
+        width: 100%;
+    }
 
-                .menu-contact p {
-                    margin: 0;
-                    padding: 5px 0;
-                    font-size: 16px;
-                }
+    .menu-contact p {
+        margin: 0;
+        padding: 5px 0;
+        font-size: 16px;
+    }
 
-                .menu-contact a {
-                    color: #000;
-                    text-decoration: none;
-                }
+    .menu-contact a {
+        color: #000;
+        text-decoration: none;
+    }
 
-                .menu-contact i {
-                    margin-left: 5px;
-                }
-            </style>
-            <!-- sliding-menu-Overlay to close the menu -->
-            <div class="sliding-menu-overlay" onclick="toggleMenu()"></div>
-            <!-- Page Header -->
-            <div class="header">
-                <div class="hamburger-menu" onclick="toggleMenu()">
-                    <div class="hamburger-menu-bar"></div>
-                    <div class="hamburger-menu-bar"></div>
-                    <div class="hamburger-menu-bar"></div>
-                </div>
-                <div class="header-center-text">Maya &amp; Tom</div>
-                <div class="header-heart-symbol">🤍</div>
-            </div>
-            <div class="sliding-menu" id="menu">
-                <div class="sliding-menu-close-button" onclick="toggleMenu()">X</div>
-                <div class="sliding-menu-links">
-                    <ul>
-                        <li><a href="index.html">❣️ עמוד הבית</a></li>
-                        <li><a href="dj-live.html"><strong>🎶 דיג׳יי לייב</strong></a></li>
-                        <li><a href="food.html">🍲 תפריט</a></li>
-                        <li><a href="family-tree.html">🐣 מי זה מי</a></li>
-                        <li><a href="know-us.html">🏆 טריוויה</a></li>
-                        <li><a href="bride-or-groom.html">🥸 חידון אישיות</a></li>
-                        <li><a href="seats.html">🍽️ סידורי הושבה</a></li>
-                        <li><a href="bathroom-bride.html">💄 להתרענן עם מאיה</a></li>
-                        <li><a href="bathroom-groom.html">🪒 להתרענן עם תום</a></li>
-                        <li><a href="message.html">👩‍❤️‍👨 הסיפור שלנו</a></li>
-                        <li><a href="gallery.html">📸 גלרייה בלייב</a></li>
-                        <li><a href="greetings.html">💌 ספר ברכות</a></li>
-                    </ul>
-                </div>
-                <div class="menu-contact">
-                    <p>קוד אהבה משלכם ← <a
-                            href="https://wa.me/972547899741?text=%D7%94%D7%99%D7%99%2C%20%D7%90%D7%A9%D7%9E%D7%97%20%D7%9C%D7%A4%D7%A8%D7%98%D7%99%D7%9D%20%D7%A0%D7%95%D7%A1%D7%A4%D7%99%D7%9D%20%D7%A2%D7%9C%20%D7%99%D7%A6%D7%99%D7%A8%D7%AA%20%D7%B4%D7%A7%D7%95%D7%93%20%D7%90%D7%94%D7%91%D7%94%D7%B4%20%D7%9E%D7%A9%D7%9C%D7%99%20%F0%9F%AB%B6%F0%9F%8F%BB"><img
-                                alt="WhatsApp" class="whatsapp-icon" src="./img/whatsapp-icon.png" /></a></p>
-                    <p><a href="mailto:hello@lovecode.co.il">hello@lovecode.co.il</a></p>
-                </div>
-            </div>
-            <script>
-                function toggleMenu() {
-                    var menu = document.getElementById("menu");
-                    var sliding_menu_overlay = document.querySelector('.sliding-menu-overlay');
-                    if (menu.style.right === "0%") {
-                        menu.style.right = "-80%";
-                        sliding_menu_overlay.style.display = 'none';
-                    } else {
-                        menu.style.right = "0%";
-                        sliding_menu_overlay.style.display = 'block';
-                    }
-                }
-            </script>
-        </div>
-        <!-- TODO: Move over to a separte file once done -->
-        <style>
+    .menu-contact i {
+        margin-left: 5px;
+    }
+</style>
+<!-- sliding-menu-Overlay to close the menu -->
+<div class="sliding-menu-overlay" onclick="toggleMenu()"></div>
+<!-- Page Header -->
+<div class="header">
+<div class="hamburger-menu" onclick="toggleMenu()">
+<div class="hamburger-menu-bar"></div>
+<div class="hamburger-menu-bar"></div>
+<div class="hamburger-menu-bar"></div>
+</div>
+<div class="header-center-text">Maya &amp; Tom</div>
+<div class="header-heart-symbol">🤍</div>
+</div>
+<div class="sliding-menu" id="menu">
+<div class="sliding-menu-close-button" onclick="toggleMenu()">X</div>
+<div class="sliding-menu-links">
+<ul><li><a href="index.html">❣️ עמוד הבית</a></li><li><a href="dj-live.html"><strong>🎶 דיג׳יי לייב</strong></a></li><li><a href="food-menu.html">🍲 תפריט</a></li><li><a href="food-image.html">🍲 תפריט</a></li><li><a href="family-tree.html">🐣 מי זה מי</a></li><li><a href="know-us.html">🏆 טריוויה</a></li><li><a href="bride-or-groom.html">🥸 חידון אישיות</a></li><li><a href="seats.html">🍽️ סידורי הושבה</a></li><li><a href="bathroom-bride.html">💄 להתרענן עם מאיה</a></li><li><a href="bathroom-groom.html">🪒 להתרענן עם תום</a></li><li><a href="message.html">👩‍❤️‍👨 הסיפור שלנו</a></li><li><a href="gallery.html">📸 גלרייה בלייב</a></li><li><a href="greetings.html">💌 ספר ברכות</a></li><li><a href="food-cocktails.html">🍹 תפריט קוקטיילים</a></li></ul>
+</div>
+<div class="menu-contact">
+<p>קוד אהבה משלכם ← <a href="https://wa.me/972547899741?text=%D7%94%D7%99%D7%99%2C%20%D7%90%D7%A9%D7%9E%D7%97%20%D7%9C%D7%A4%D7%A8%D7%98%D7%99%D7%9D%20%D7%A0%D7%95%D7%A1%D7%A4%D7%99%D7%9D%20%D7%A2%D7%9C%20%D7%99%D7%A6%D7%99%D7%A8%D7%AA%20%D7%B4%D7%A7%D7%95%D7%93%20%D7%90%D7%94%D7%91%D7%94%D7%B4%20%D7%9E%D7%A9%D7%9C%D7%99%20%F0%9F%AB%B6%F0%9F%8F%BB"><img alt="WhatsApp" class="whatsapp-icon" src="./img/whatsapp-icon.png"/></a></p>
+<p><a href="mailto:hello@lovecode.co.il">hello@lovecode.co.il</a></p>
+</div>
+</div>
+<script>
+    function toggleMenu() {
+        var menu = document.getElementById("menu");
+        var sliding_menu_overlay = document.querySelector('.sliding-menu-overlay');
+        if (menu.style.right === "0%") {
+            menu.style.right = "-80%";
+            sliding_menu_overlay.style.display = 'none';
+        } else {
+            menu.style.right = "0%";
+            sliding_menu_overlay.style.display = 'block';
+        }
+    }
+</script></div>
+<!-- TODO: Move over to a separte file once done -->
+<style>
             .dj-form-container {
                 display: flex;
                 flex-direction: column;
                 align-items: center;
+                width: 100%;
             }
 
-            .form-input {
+            .form-input-short {
                 border-radius: 10px;
                 border: 1px solid #C8C8C8;
                 padding: 10px;
                 margin: 12.5px 0;
                 text-align: center;
-                width: 200px;
+                width: 70%;
+                min-height: 30px;
                 color: grey;
             }
 
@@ -214,6 +197,7 @@
                 display: flex;
                 flex-direction: column;
                 align-items: center;
+                width: 100%;
             }
 
             .dj-submission-list {
@@ -254,15 +238,8 @@
             }
 
             .dj-form button {
-                border-radius: 10px;
-                border: 1px solid #C8C8C8;
-                padding: 10px 20px;
                 margin-top: 25px;
-                text-align: center;
-                background-color: #9D5C63;
-                color: white;
-                font-family: 'Assistant', sans-serif;
-                font-size: 16px;
+
                 cursor: pointer;
                 transition: background-color 0.3s ease;
             }
@@ -272,33 +249,97 @@
             }
 
             input[type="text"]::placeholder {
-                /* Firefox, Chrome, Opera */
+                /* Chrome, Firefox, Opera, Safari 10.1+ */
+                color: grey;
+                opacity: 1;
                 text-align: right;
+                font-family: 'Assistant', sans-serif;
+            }
+
+            input[type="text"]:-ms-input-placeholder {
+                /* Internet Explorer 10-11 */
+                color: grey;
+            }
+
+            input[type="text"]::-ms-input-placeholder {
+                /* Microsoft Edge */
+                color: grey;
+            }
+
+            input[type="text"]:focus::placeholder {
+                /* Chrome, Firefox, Opera, Safari 10.1+ */
+                color: transparent;
+            }
+
+            input[type="text"] {
+                /* Chrome, Firefox, Opera, Safari 10.1+ */
+                color: black;
+                opacity: 1;
+                text-align: right;
+                font-family: 'Assistant', sans-serif;
+            }
+
+
+            .submission-grid {
+                display: grid;
+                /* background-color: #2196F3; */
+                width: 85%;
+                grid-template-columns: 17% 46% 37%;
+                padding-bottom: 15px;
+            }
+
+            .submission-grid-item {
+                background-color: #ffffff;
+                text-align: right;
+                padding: 5px;
+            }
+
+            .submission-emoji-icon {
+                grid-column: 1;
+                grid-row: 1 / span 2;
+                margin: auto 0px auto 5px;
+                font-size: 26px;
+                text-align: left;
+            }
+
+            .submission-name {
+                grid-column: 2;
+                grid-row: 1;
+                color: #9D5C63;
+                font-size: 16px;
+            }
+
+            .submission-timestamp {
+                grid-column: 3;
+                grid-row: 1;
+                color: grey;
+                font-size: 12px;
+                margin: auto 0px;
+            }
+
+            .submission-answer {
+                grid-column: 2 / span 2;
+                grid-row: 2;
+                font-size: 16px;
+                padding-top: 0px;
             }
         </style>
-        <!-- Firebase Imports -->
-        <script src="https://www.gstatic.com/firebasejs/8.6.1/firebase-app.js"></script>
-        <script src="https://www.gstatic.com/firebasejs/8.6.1/firebase-database.js"></script>
-
-        <div class="generic-page-header">Hey DJ, Play My Song</div>
-        <div class="generic-page-intro-paragraph">הדיג׳יי ההורסת שלנו, שי גונן, תשמח לנגן מה שהקהל שלנו רוצה לשמוע.
+<div class="generic-page-header">Hey DJ, Play My Song</div>
+<div class="generic-page-intro-paragraph">הדיג׳יי ההורסת שלנו, שי גונן, תשמח לנגן מה שהקהל שלנו רוצה לשמוע.
             תרגישו חופשי לשלוח אליה בקשות מיוחדות,
             ובהתאם לשיקול הדעת שלה, היא תוכל לשלב את השיר במהלך הערב!
         </div>
-        <div class="dj-form-container">
-            <form class="dj-form">
-                <!-- \u0590-\u05fe is א-ת for the validation of hebrew -->
-                <input class="form-input" type="text" id="name" name="name" placeholder="קוראים לי..." required
-                    pattern="[A-Za-z\u0590-\u05fe\s]*" oninvalid="this.setCustomValidity('בחייך, אותיות בלבד!')">
-                <input class="form-input" type="text" id="song" name="song" placeholder="אני רוצה לשמוע את..." required
-                    pattern="[A-Za-z\u0590-\u05fe\s]*" oninvalid="this.setCustomValidity('בחייך, אותיות בלבד!')">
-                <button type="submit">Submit</button>
-            </form>
-            <div class="dj-submission-list">
-            </div>
-        </div>
-
-        <script>
+<div class="dj-form-container">
+<form class="dj-form">
+<!-- \u0590-\u05fe is א-ת for the validation of hebrew -->
+<input class="form-input-short" id="name" name="name" oninvalid="this.setCustomValidity('בחייך, אותיות בלבד!')" pattern="[A-Za-z\u0590-\u05fe\s]+" placeholder="קוראים לי..." required="" type="text"/>
+<input class="form-input-short" id="song" name="song" oninvalid="this.setCustomValidity('בחייך, אותיות בלבד!')" pattern="[A-Za-z\u0590-\u05fe\s]+" placeholder="אני רוצה לשמוע את..." required="" type="text"/>
+<button type="submit">שליחה</button>
+</form>
+<div class="dj-submission-list">
+</div>
+</div>
+<script>
             var form = document.querySelector('.dj-form');
             var list = document.querySelector('.dj-submission-list');
 
@@ -363,19 +404,27 @@
 
             function addSongToDOM(song) {
                 var submission = document.createElement('div');
-                submission.classList.add('dj-submission');
-
+                submission.classList.add('dj-submission-new');
+                submission.classList.add('submission-grid');
                 var timeAgo = getTimeAgo(new Date(song.timestamp));
-                var emojis = ["🎻", "🪗", "🎺", "🎤", "🥁", "🎸", "🎵", "🎶"];
+                var emojis = ["🎻", "🪗", "🎺", "🎤", "🥁", "🎸"];
                 var randomIndex = Math.floor(Math.random() * emojis.length);
                 emoji = emojis[randomIndex];
-                submission.innerHTML = `
-                <p class="submission-author">
-                  <span>${emoji} </span>${song.name}<span class="submission-time">${timeAgo}</span>   
-                </p>
-                <p class="submission-song">${song.song}</p>
-              `;
 
+                submission.innerHTML = `
+                    <div class="submission-grid-item submission-emoji-icon">
+                        <span>${emoji}</span>
+                        </div>
+                        <div class="submission-grid-item submission-name">
+                            <span>${song.name}</span>
+                            </div>
+                            <div class="submission-grid-item submission-timestamp">
+                                <span>${timeAgo}</span>
+                                </div>
+                                <div class="submission-grid-item submission-answer">
+                                    <span>${song.song}</span>
+                                    </div>
+                                `;
                 list.prepend(submission);
             }
 
@@ -391,71 +440,65 @@
                 }
             }
         </script>
+<div id="footer-placeholder"><style>
+    footer {
+        text-align: center;
+        padding: 10px 0;
+        background-color: #fff;
+        /* replace with the color you want */
+        border-top: 1px solid #CFCFCF;
+        margin-top: 20px;
+    }
 
+    .footer-header {
+        font-size: 16px;
+        /* Size is typically smaller than h2 and larger than h4 */
+        font-weight: bold;
+        /* Headings are usually bold */
+        margin-top: 10px;
+        /* Add space above the heading */
+        margin-bottom: 0;
+        /* Add space below the heading */
+    }
 
+    .footer-contact {
+        display: flex;
+        justify-content: center;
+        gap: 30px;
+        align-items: center;
+        padding: 10px 0;
+        font-size: 14px;
+    }
 
+    .foooter-whatsapp-icon {
+        width: 20px;
+        height: 20px;
+        vertical-align: center;
+    }
 
-        <div id="footer-placeholder">
-            <style>
-                footer {
-                    text-align: center;
-                    padding: 10px 0;
-                    background-color: #fff;
-                    /* replace with the color you want */
-                }
+    footer a {
+        color: #000;
+        /* replace with the color you want */
+        text-decoration: none;
+    }
 
-                .footer-header {
-                    font-size: 1.17em;
-                    /* Size is typically smaller than h2 and larger than h4 */
-                    font-weight: bold;
-                    /* Headings are usually bold */
-                    margin-top: 1em;
-                    /* Add space above the heading */
-                    margin-bottom: 0;
-                    /* Add space below the heading */
-                }
-
-                .footer-contact {
-                    display: flex;
-                    justify-content: center;
-                    gap: 30px;
-                    align-items: center;
-                    padding: 10px 0;
-                    font-size: 14px;
-                }
-
-                .foooter-whatsapp-icon {
-                    width: 20px;
-                    height: 20px;
-                    vertical-align: center;
-                }
-
-                footer a {
-                    color: #000;
-                    /* replace with the color you want */
-                    text-decoration: none;
-                }
-
-                footer small {
-                    color: grey;
-                    /* replace with the color you want */
-                }
-            </style>
-            <!-- <div style="clear:both;"></div> -->
-            <footer>
-                <div class="footer-header">?Want your own love code</div>
-                <div class="footer-contact">
-                    <a href="tel:054-7899741">054-7899741</a>
-                    <a
-                        href="https://wa.me/972547899741?text=%D7%94%D7%99%D7%99%2C%20%D7%90%D7%A9%D7%9E%D7%97%20%D7%9C%D7%A4%D7%A8%D7%98%D7%99%D7%9D%20%D7%A0%D7%95%D7%A1%D7%A4%D7%99%D7%9D%20%D7%A2%D7%9C%20%D7%99%D7%A6%D7%99%D7%A8%D7%AA%20%D7%B4%D7%A7%D7%95%D7%93%20%D7%90%D7%94%D7%91%D7%94%D7%B4%20%D7%9E%D7%A9%D7%9C%D7%99%20%F0%9F%AB%B6%F0%9F%8F%BB">
-                        <img alt="WhatsApp" class="foooter-whatsapp-icon" src="../img/whatsapp-icon.png" />
-                    </a>
-                    <a href="mailto:hello@lovecode.co.il">hello@lovecode.co.il</a>
-                </div>
-                <small>ⓒ Love Code 2023</small>
-            </footer>
-        </div>
-    </div>
+    footer small {
+        color: grey;
+        /* replace with the color you want */
+    }
+</style>
+<!-- <div style="clear:both;"></div> -->
+<footer>
+<div class="footer-header">?Want your own love code</div>
+<div class="footer-contact">
+<a href="tel:054-7899741">054-7899741</a>
+<a href="https://wa.me/972547899741?text=%D7%94%D7%99%D7%99%2C%20%D7%90%D7%A9%D7%9E%D7%97%20%D7%9C%D7%A4%D7%A8%D7%98%D7%99%D7%9D%20%D7%A0%D7%95%D7%A1%D7%A4%D7%99%D7%9D%20%D7%A2%D7%9C%20%D7%99%D7%A6%D7%99%D7%A8%D7%AA%20%D7%B4%D7%A7%D7%95%D7%93%20%D7%90%D7%94%D7%91%D7%94%D7%B4%20%D7%9E%D7%A9%D7%9C%D7%99%20%F0%9F%AB%B6%F0%9F%8F%BB">
+<img alt="WhatsApp" class="foooter-whatsapp-icon" src="../img/whatsapp-icon.png"/>
+</a>
+<a href="mailto:hello@lovecode.co.il">hello@lovecode.co.il</a>
+</div>
+<small>ⓒ Love Code 2023</small>
+</footer></div>
+</div>
 </body>
-
 </html>

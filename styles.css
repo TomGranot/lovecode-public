@@ -3,6 +3,8 @@
 } */
 @import url('https://fonts.googleapis.com/css2?family=Assistant:wght@200;300;400;500;600;700;800&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Assistant:wght@200;300;400;500;600;700;800&family=Meow+Script&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bona+Nova:ital,wght@0,400;0,700;1,400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap');
 
 /* Default styles */
 body,
@@ -38,7 +40,7 @@ p {
 
 /* Grid system */
 .grid {
-    display: flex;
+    display: grid;
     justify-content: space-around;
     width: 100%;
 }
@@ -47,7 +49,7 @@ p {
     flex: 1;
     margin: 10px;
     padding: 20px;
-    background-color: #ddd;
+    /* background-color: #ddd; */
     text-align: center;
 }
 
@@ -80,7 +82,7 @@ p {
     /* This makes the text bold, adjust as necessary */
     margin: 20px 0;
     /* This provides space above and below the heading, adjust as necessary */
-
+font-family: PT serif;
 
 }
 
@@ -91,11 +93,111 @@ p {
     /* You can adjust the size to fit your design */
     color: #000000;
     /* This is the text color, adjust as necessary */
-    text-align: center;
+    text-align: justify;
     /* This centers the text, adjust as necessary */
     /* font-weight: bold; */
     /* This makes the text bold, adjust as necessary */
-    margin: 20px 0;
+    margin: 20px 10px;
     /* This provides space above and below the heading, adjust as necessary */
     padding: 5px 10px 10px;
+}
+
+.grid-item-image {
+    width: 100%;
+}
+
+.food-menu {
+    background-color: #F6F0F1;
+    stroke: #000;
+    stroke-width: 1px;
+    border-radius: 30px;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    font-family: Bona Nova;
+}
+
+h3.menu-category-title {
+    color: #A95A63;
+    text-align: center;
+    font-family: Bona Nova;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    margin: auto;
+}
+
+.menu-category {
+    padding: 10px;
+    margin: 10px auto 0px;
+}
+
+button {
+    border-radius: 30px;
+    border: 1px solid #C8C8C8;
+    text-align: center;
+    background-color: #9D5C63;
+    color: white;
+    font-family: 'Assistant', sans-serif;
+    /* font-size: 16px; */
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    width: 150px;
+    height: 50px;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+.grid.family-tree {
+    grid-template-columns: 50% 50%;
+    margin-top: 30px;
+}
+
+.grid-item.family-category-title {
+    grid-column: 1 / span 2;
+    background: #FEF5EF;
+    color: #000;
+text-align: center;
+/* text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25); */
+font-family: Assistant;
+font-size: 24px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+}
+
+.grid-item.family-single-item {
+    grid-column: 1 / span 2;
+    padding: 20px 0px 0px;
+}
+
+.grid-item.family-double-item {
+    padding: 0px;
+}
+
+.grid-item.family-single-item img {
+    width: 60%;
+}
+
+.grid-item.family-single-item p {
+    width: 80%;
+    margin: auto;
+    padding-bottom: 10px;
+}
+
+
+.grid-item.family-double-item img {
+    width: 90%;
+}
+
+.grid.family-tree h3 {
+    font-size: 16px;
+}
+
+.grid.family-tree p {
+    font-size: 14px;
+    text-align: justify;
 }
